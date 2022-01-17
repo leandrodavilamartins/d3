@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+</head>
+<body>
+    <svg></svg>
+
+    <script>
+        const width = document.querySelector('body').clientWidth; 
+        const height = 500;
+
+        const margin = {'top': 20, 'bottom': 30, 'left': 20, 'right': 20}; 
+
+        const svg = d3.select('svg')
+        .attr('viewBox',[0,0,width, height])
+
+        x_scale = d3.scaleBand().range([margin.left,width - margin.right]).padding(0.1);
+        y_scale = d3.scaleLinear().range([height - margin.bottom, margin.top]);
+
+
+        d3.json("./cidades.json").then( (data) => {
+
+            data.forEach( d => d.population = parseInt(d.population))
+
+            x_scale.domain(data.map((d) => d.city));
+            y_scale.domain([0,d3.max(data, d => d.population)]);
+
+            let x_axis = d3.axisBottom(x_scale);
+            let y_axis = d3.axisBottom(y_scale);
+
+            svg
+            .selectAll('rect')
+            .data(data)
+            .join('rect')
+            .style('fill', 'green')
+            .attr('x', (d) => x_scale(d.city))
+            .attr('y', (d) => y_scale(d.population))
+            .attr('width', x_scale.bandwidth())
+            .attr('height', (d) => height - y_scale(d.population)) 
+
+            svg
+            .append("g")
+            .attr("transform", `translate(0,${height - margin.bottom})`)
+            .call(x_axis)
+            .selectAll("text") // everything from this point is optional
+            .style("text-anchor", "end")
+            .attr("dx", "-.8em")
+            .attr("dy", ".15em")
+            .attr("transform", "rotate(-65)");
+
+            svg
+            .append("g")
+            .attr("transform", `translate(${margin.left},0)`)
+            .call(y_axis);
+
+        
+        })
+    </script>
+</body>
+</html>

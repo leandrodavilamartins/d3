@@ -1,0 +1,211 @@
+[
+    {
+      "city": "Suzano", 
+      "lat": "-23.5428", 
+      "lng": "-46.3108", 
+      "country": "Brazil", 
+      "iso2": "BR", 
+      "admin_name": "São Paulo", 
+      "capital": "", 
+      "population": "285280", 
+      "population_proper": "285280"
+    }, 
+    {
+      "city": "Santa Maria", 
+      "lat": "-29.6839", 
+      "lng": "-53.8069", 
+      "country": "Brazil", 
+      "iso2": "BR", 
+      "admin_name": "Rio Grande do Sul", 
+      "capital": "", 
+      "population": "283677", 
+      "population_proper": "283677"
+    }, 
+    {
+      "city": "Marabá", 
+      "lat": "-5.3689", 
+      "lng": "-49.1178", 
+      "country": "Brazil", 
+      "iso2": "BR", 
+      "admin_name": "Pará", 
+      "capital": "", 
+      "population": "283542", 
+      "population_proper": "283542"
+    }, 
+    {
+      "city": "Governador Valadares", 
+      "lat": "-18.8508", 
+      "lng": "-41.9489", 
+      "country": "Brazil", 
+      "iso2": "BR", 
+      "admin_name": "Minas Gerais", 
+      "capital": "", 
+      "population": "278363", 
+      "population_proper": "278363"
+    }, 
+    {
+      "city": "Juazeiro do Norte", 
+      "lat": "-7.2128", 
+      "lng": "-39.3150", 
+      "country": "Brazil", 
+      "iso2": "BR", 
+      "admin_name": "Ceará", 
+      "capital": "", 
+      "population": "276264", 
+      "population_proper": "276264"
+    }, 
+    {
+      "city": "Crato", 
+      "lat": "-7.2342", 
+      "lng": "-39.4094", 
+      "country": "Brazil", 
+      "iso2": "BR", 
+      "admin_name": "Ceará", 
+      "capital": "", 
+      "population": "273883", 
+      "population_proper": "54416"
+    }, 
+    {
+      "city": "Crato", 
+      "lat": "-7.4639", 
+      "lng": "-63.0400", 
+      "country": "Brazil", 
+      "iso2": "BR", 
+      "admin_name": "Amazonas", 
+      "capital": "", 
+      "population": "273883", 
+      "population_proper": "54416"
+    }, 
+    {
+      "city": "Palmas", 
+      "lat": "-10.2128", 
+      "lng": "-48.3603", 
+      "country": "Brazil", 
+      "iso2": "BR", 
+      "admin_name": "Tocantins", 
+      "capital": "admin", 
+      "population": "272726", 
+      "population_proper": "272726"
+    }, 
+    {
+      "city": "Taboão da Serra", 
+      "lat": "-23.6019", 
+      "lng": "-46.7528", 
+      "country": "Brazil", 
+      "iso2": "BR", 
+      "admin_name": "São Paulo", 
+      "capital": "", 
+      "population": "272177", 
+      "population_proper": "272177"
+    }, 
+    {
+      "city": "Parnamirim", 
+      "lat": "-5.9158", 
+      "lng": "-35.2628", 
+      "country": "Brazil", 
+      "iso2": "BR", 
+      "admin_name": "Rio Grande do Norte", 
+      "capital": "", 
+      "population": "267036", 
+      "population_proper": "267036"
+    }, 
+    {
+      "city": "Sumaré", 
+      "lat": "-22.8219", 
+      "lng": "-47.2669", 
+      "country": "Brazil", 
+      "iso2": "BR", 
+      "admin_name": "São Paulo", 
+      "capital": "", 
+      "population": "265955", 
+      "population_proper": "265955"
+    }, 
+    {
+      "city": "Ipatinga", 
+      "lat": "-19.4678", 
+      "lng": "-42.5369", 
+      "country": "Brazil", 
+      "iso2": "BR", 
+      "admin_name": "Minas Gerais", 
+      "capital": "", 
+      "population": "265409", 
+      "population_proper": "265409"
+    }, 
+    {
+      "city": "Volta Redonda", 
+      "lat": "-22.5231", 
+      "lng": "-44.1042", 
+      "country": "Brazil", 
+      "iso2": "BR", 
+      "admin_name": "Rio de Janeiro", 
+      "capital": "", 
+      "population": "262970", 
+      "population_proper": "262970"
+    }, 
+    {
+      "city": "Barueri", 
+      "lat": "-23.5111", 
+      "lng": "-46.8764", 
+      "country": "Brazil", 
+      "iso2": "BR", 
+      "admin_name": "São Paulo", 
+      "capital": "", 
+      "population": "262275", 
+      "population_proper": "262275"
+    }, 
+    {
+      "city": "Imperatriz", 
+      "lat": "-5.5258", 
+      "lng": "-47.4758", 
+      "country": "Brazil", 
+      "iso2": "BR", 
+      "admin_name": "Maranhão", 
+      "capital": "", 
+      "population": "259337", 
+      "population_proper": "259337"
+    }, 
+    {
+      "city": "Foz do Iguaçu", 
+      "lat": "-25.5400", 
+      "lng": "-54.5875", 
+      "country": "Brazil", 
+      "iso2": "BR", 
+      "admin_name": "Paraná", 
+      "capital": "", 
+      "population": "258248", 
+      "population_proper": "258248"
+    }, 
+    {
+      "city": "Cascavel", 
+      "lat": "-24.9558", 
+      "lng": "-53.4553", 
+      "country": "Brazil", 
+      "iso2": "BR", 
+      "admin_name": "Paraná", 
+      "capital": "", 
+      "population": "257172", 
+      "population_proper": "201428"
+    }, 
+    {
+      "city": "Viamão", 
+      "lat": "-30.0808", 
+      "lng": "-51.0228", 
+      "country": "Brazil", 
+      "iso2": "BR", 
+      "admin_name": "Rio Grande do Sul", 
+      "capital": "", 
+      "population": "256302", 
+      "population_proper": "256302"
+    }, 
+    {
+      "city": "Gravataí", 
+      "lat": "-29.9433", 
+      "lng": "-50.9939", 
+      "country": "Brazil", 
+      "iso2": "BR", 
+      "admin_name": "Rio Grande do Sul", 
+      "capital": "", 
+      "population": "255660", 
+      "population_proper": "255660"
+    }
+  ]

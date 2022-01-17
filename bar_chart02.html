@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+</head>
+<body>
+    <svg></svg>
+
+    <script>
+        const width = 1080, height = 500;
+
+        const x_scale = d3.scaleBand().range([0,width]).padding(0.1);
+        const y_scale = d3.scaleLinear().range([height,0])
+
+        const svg = d3.select("svg")
+        .attr("width", width)
+        .attr("height", height)
+
+        d3.json("./cidades.json").then(data => {
+            data.forEach( (d) => parseInt(d.population))
+
+            x_scale.domain(data.map( d =>d.city ));
+            y_scale.domain([0, d3.max(data, d => d.population)])
+
+            svg
+            .selectAll("rect")
+            .data(data)
+            .join("rect") // every attribute after that will be applied to every rect element added 
+            .attr("fill", 'royalblue')
+            .attr("x", (d) => x_scale(d.city))
+            .attr("y", (d) => y_scale(d.population))
+            .attr("width", x_scale.bandwidth())
+            .attr("height", (d) => height - y_scale(d.population))
+        })
+    </script>
+</body>
+</html>

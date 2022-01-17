@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .container{
+            width: 250px;
+            height: 200px;
+            border: 1px solid 'blue';
+        }
+
+        .bar{
+            fill:'blue';
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <svg></svg>
+    </div>
+
+    <script>
+
+        const DUMMY_DATA = [
+            {id: 'd1', value: 10, region: 'USA'},
+            {id: 'd2', value: 20, region: 'India'},
+            {id: 'd3', value: 30, region: 'Germany'},
+            {id: 'd4', value: 40, region: 'Italy'},
+        ];
+
+        const xScale = d3.scaleBand().rangeRound([0,250]).padding(0.1);
+        const yScale = d3.scaleLinear().domain([0,15]).range([200,0])
+
+        const container = d3.select("svg").classed('container',true);
+
+        const bars = container
+        .selectAll('.bar')
+        .data(DUMMY_DATA)
+        .enter()
+        .append('rect')
+        .classed('bar', true)
+        .attr('width',xScale.bandwidth())
+        .attr('height', (data) => data.value * 15);
+    </script>
+</body>
+</html>

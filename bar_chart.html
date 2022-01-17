@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+</head>
+<body>
+    <svg id="d3_demo"></svg>
+    <script>
+        const width = 1080, height = 500; // set width and height 
+
+const x_scale = d3.scaleBand().range([0, width]).padding(0.1); // set scale for x-avis 
+const y_scale = d3.scaleLinear().range([height, 0]); // set scale for y-axis 
+
+const svg = d3.select("#d3_demo") // select the svg element 
+    .attr("width", width) // set width for the selected svg element 
+    .attr("height", height); // set the height for the selected svg element 
+
+d3.json("./cidades.json") // open .json file with d3 
+    .then((data) => { // async callback 
+    data.forEach((d) => console.log(parseInt(d.population)));
+    data.forEach((d) => parseInt(d.population))
+
+	 // Scale the Domain
+	 x_scale.domain(data.map((d) => d.city)); // for every element of the data array , the city key will be passed as argument to x_scale's domain
+	 y_scale.domain([0, d3.max(data, (d) => d.population)]); // d.population will be used as data to the y_axis 
+
+	 // add the rectangles for the bar chart
+	 svg
+	  .selectAll("rect")
+	  .data(data)
+	  .join("rect") // create rect for every data element 
+	  .attr("class", "bar") 
+      .attr("fill", "royalblue") // fill the svg 
+	  .attr("x", (d) => x_scale(d.city)) // get the data and use it the to feed the function x_scale 
+	  .attr("y", (d) => y_scale(d.population)) // get the data and use it to feed the function y_scale 
+	  .attr("width", x_scale.bandwidth()) // the width will automatic adjust to the x_axis 
+	  .attr("height", (d) => height - y_scale(d.population));
+	});
+    </script>
+</body>
+</html>
